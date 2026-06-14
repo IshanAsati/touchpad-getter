@@ -53,7 +53,7 @@ async def main():
     with open(output_name, "wb") as f:
         f.write(img2pdf.convert(image_bytes_list, layout_fun=layout_fun))
         
-    print(f"🎉 All {TOTAL_PAGES} pages saved to {output_name}")
+    print(f"🎉 All {len(pages)} pages saved to {output_name}")
 
 if __name__ == "__main__":
     asyncio.run(main())
