@@ -20,7 +20,8 @@ async def download_page(session, semaphore, page):
                     return (page, data)
                 else:
                     return None
-        except Exception:
+        except Exception as e:
+            print(f"❌ Error downloading page {page}: {e}")
             return None
 
 async def main():
